@@ -1,0 +1,23 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    top: 30vh;
+    font-size: larger;
+    background-color: rgb(158, 158, 158);
+}
+
+.register {
+    margin-left: 40%;
+    text-decoration: underline;
+    color: rgb(0, 89, 255);
+}
+
+.login {
+    margin-left: 25%;
+    color: rgb(0, 89, 255);
+}
