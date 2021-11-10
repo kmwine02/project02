@@ -1,0 +1,102 @@
+[
+	{
+		"firstName": "Germane",
+    "lastName": "Newton",
+    "phone": "(291) 461-4417",
+		"addressLine1": "498-7004 Vehicula St.",
+    "addressLine2": "",
+		"city": "Lakewood",
+    "state": "California",
+		"zip": "25215"
+	},
+	{
+		"firstName": "Norman",
+    "lastName": "Freeman",
+		"phone": "615-360-8120",
+		"addressLine1": "284 Mauris Av.",
+    "addressLine2": "Ap 969",
+		"city": "Athens",
+    "state": "Georgia",
+		"zip": "95445"
+	},
+	{
+		"firstName": "Gretchen",
+    "lastName": "Osborne",
+		"phone": "1-741-756-6244",
+		"addressLine1": "5026 Ipsum Rd.",
+    "addressLine2": "P.O. Box 601",
+		"city": "Anchorage",
+    "state": "Alaska",
+		"zip": "35378"
+	},
+	{
+		"firstName": "Erich",
+    "lastName": "Saunders",
+		"phone": "1-775-164-1775",
+		"addressLine1": "9985 Ultrices St.",
+    "addressLine2": "",
+		"city": "Fort Collins",
+    "state": "Colorado",
+		"zip": "65586"
+	},
+	{
+		"firstName": "Luke",
+    "lastName": "Benson",
+		"phone": "1-778-669-7092",
+		"addressLine1": "6558 Nunc. Avenue",
+    "addressLine2": "Ap 557",
+		"city": "Seattle",
+    "state": "Washington",
+		"zip": "76643"
+	},
+  {
+		"firstName": "Yoko",
+    "lastName": "Erickson",
+		"phone": "(334) 475-5428",
+		"addressLine1": "510 Lorem, Street",
+    "addressLine2": "",
+		"city": "Racine",
+    "state": "Wisconsin",
+		"zip": "44361"
+	},
+	{
+		"firstName": "Simon",
+    "lastName": "Jones",
+		"phone": "(246) 327-8588",
+		"addressLine1": "7318 Sit Ave",
+    "addressLine2": "",
+		"city": "Burlington",
+    "state": "Vermont",
+		"zip": "84742"
+	},
+	{
+		"firstName": "Alfreda",
+    "lastName": "Browning",
+		"phone": "(184) 968-9222",
+		"addressLine1": "923 Nibh Road",
+    "addressLine2": "Ap 300",
+		"city": "Norman",
+    "state": "Oklahoma",
+		"zip": "29043"
+	},
+	{
+		"firstName": "Cain",
+    "lastName": "Clemons",
+		"phone": "1-386-465-2755",
+		"addressLine1": "2811 Velit Av.",
+    "addressLine2": "353",
+		"city": "Little Rock",
+    "state": "Arkansas",
+		"zip": "10129"
+	},
+	{
+		"firstName": "Jordan",
+    "lastName": "Potter",
+		"phone": "1-856-428-0521",
+		"addressLine1": "479-211 Sapien. St.",
+    "addressLine2": "479",
+		"city": "Davenport",
+    "state": "Florida",
+		"zip": "42610"
+	}
+]
