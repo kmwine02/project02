@@ -1,17 +1,32 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345"
+    "firstName": "Dynah",
+    "lastName": "Cholwell",
+    "email": "dcholwell0@squarespace.com",
+    "password": "iYR8L0oWnmM"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "firstName": "Dorena",
+    "lastName": "Gwilym",
+    "email": "dgwilym1@kickstarter.com",
+    "password": "kBTsTbRno"
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "firstName": "Shayna",
+    "lastName": "Cretney",
+    "email": "scretney2@cargocollective.com",
+    "password": "YKOkD0YWV3y"
+  },
+  {
+    "firstName": "Nealy",
+    "lastName": "Allot",
+    "email": "nallot3@pbs.org",
+    "password": "BxRS4CXI2"
+  },
+  {
+    "firstName": "Darcy",
+    "lastName": "Elnaugh",
+    "email": "delnaugh4@sphinn.com",
+    "password": "cISEnrh"
   }
 ]
