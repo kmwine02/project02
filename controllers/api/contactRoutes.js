@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Contact = require('../../models/Contact');
+const User = require('../../models/User');
 
 
 // GET all Contacts
@@ -22,6 +23,8 @@ router.get('/', (req, res) => {
             addressCity: req.body.addressCity,
             addressState: req.body.addressState,
             addressZip: req.body.addressZip,
+           // userID: User.id //Fix this
+
     
           })
       .then((newContact) => {

@@ -20,7 +20,7 @@ Contact.init(
             allowNull: false
         },
         phoneNumber: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         addressLine1: {
@@ -55,7 +55,7 @@ Contact.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'contact'
+        modelName: 'Contact'
     }
 );
 
