@@ -24,13 +24,13 @@ router.get('/', (req, res) => {
             addressZip: req.body.addressZip,
     
           })
-    })
       .then((newContact) => {
         res.json(newContact);
       })
       .catch((err) => {
         res.json(err);
-      });
+      })
+    });
 
   
   // Update a contact
