@@ -36,9 +36,10 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [8]
+                len: [10]
             }
         }
+        
     },
     {
         hooks: {
@@ -53,12 +54,24 @@ User.init(
                 return updatedUserData;
               },
         },
+
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'User'
     }
+
+
 );
+
+User.associate = (models) => {
+    // Associating User with Contacts
+    // When an User is deleted, also delete Contacts
+    User.hasMany(models.Contact, {
+        allowNull: true
+    });
+};
+
 
 module.exports = User;
