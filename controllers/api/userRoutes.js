@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../../models/User');
+const {User, Contact} = require('../../models');
 const bcrypt = require('bcrypt');
 
 
@@ -86,7 +86,9 @@ router.post('/', async (req, res) => {
 // GET one user
 router.get('/:id', async (req, res) => {
   try {
-    const userData = await User.findByPk(req.params.id);
+    const userData = await User.findByPk(req.params.id,{
+      include: [{model: Contact}],
+    });
     if (!userData) {
       res.status(404).json({ message: 'No user with this id!' });
       return;
