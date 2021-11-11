@@ -46,7 +46,7 @@ Contact.init(
         userID: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'User',
+                model: 'user',
                 key: 'id'
             }
         }
@@ -56,7 +56,15 @@ Contact.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'Contact'
-    }
+    },
+
+// Contact.associate = (models) =>{
+//     models.Contact.belongsTo(models.User, {
+//         foreignKey: {
+//           allowNull: false,
+//         },
+//       });
+//     return Contact;
 );
 
 module.exports = Contact;

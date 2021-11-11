@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   });
 
   //Create a contact
-  router.post('/', (req, res) => {
+  router.post('/', (req, res) => { 
     Contact.create({
             // All the fields you can update and the data attached to the request body.
             firstName: req.body.firstName,
