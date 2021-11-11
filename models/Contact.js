@@ -46,7 +46,7 @@ Contact.init(
         userID: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
+                model: 'User',
                 key: 'id'
             }
         }
