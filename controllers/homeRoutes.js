@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Contact } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Prevent non logged in users from viewing the homepage
@@ -16,6 +16,23 @@ router.get('/', withAuth, async (req, res) => {
       users,
       // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Show the contacts for a logged in user
+router.get('/addressbook', withAuth, async (req, res) => {
+  try {
+    const userContacts = await Contact.findAll({});
+    console.log(userContacts);
+    const contact = userContacts.get({ plain: true });
+    console.log(contact);
+
+    res.render('addressbook', {
+      ...contact,
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
