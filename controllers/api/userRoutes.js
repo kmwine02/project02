@@ -1,8 +1,6 @@
 const router = require('express').Router();
-const {User, Contact} = require('../../models');
+const { User, Contact } = require('../../models');
 const bcrypt = require('bcrypt');
-
-
 
 // Login
 router.post('/login', async (req, res) => {
@@ -16,16 +14,21 @@ router.post('/login', async (req, res) => {
     if (!dbUserData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
+        .json({
+          message: 'Incorrect email or password. Please try again! wrong user',
+        });
       return;
     }
 
-    const validPassword = await bcrypt.compare(req.body.password, dbUserData.password);
+    const validPassword = await bcrypt.compare(
+      req.body.password,
+      dbUserData.password
+    );
 
     if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' });
+      res.status(400).json({
+        message: 'Incorrect email or password. Please try again! wrong',
+      });
       return;
     }
 
@@ -86,8 +89,8 @@ router.post('/', async (req, res) => {
 // GET one user
 router.get('/:id', async (req, res) => {
   try {
-    const userData = await User.findByPk(req.params.id,{
-      include: [{model: Contact}],
+    const userData = await User.findByPk(req.params.id, {
+      include: [{ model: Contact }],
     });
     if (!userData) {
       res.status(404).json({ message: 'No user with this id!' });
