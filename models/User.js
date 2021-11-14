@@ -44,7 +44,7 @@ User.init(
     {
         hooks: {
             beforeCreate: async (newUserData) => {
-                newUserData.password = await bcrpt.hash(newUserData.password, 10);
+                newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 return newUserData;
             },
             beforeUpdate: async (updatedUserData) => {
@@ -65,13 +65,13 @@ User.init(
 
 );
 
-User.associate = (models) => {
-    // Associating User with Contacts
-    // When an User is deleted, also delete Contacts
-    User.hasMany(models.Contact, {
-        allowNull: true
-    });
-};
+// User.associate = (models) => {
+//     // Associating User with Contacts
+//     // When an User is deleted, also delete Contacts
+//     User.hasMany(models.Contact, {
+//         allowNull: true
+//     });
+// };
 
 
 module.exports = User;
