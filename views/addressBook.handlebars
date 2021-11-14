@@ -1,22 +1,60 @@
 <head>
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="/css/address.css" />
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/css/address.css' />
 </head>
 
-<div class="container">
-    <div class="row title">
-        <div class="title col-sm-6 col-md-8">Address Book</div>
-        <div class="add col-6 col-md-4">
-            <button>+ Add a new contact</button>
+<div class='container container-fluid mt-5'>
+  <div class='row align-items-center'>
+    <div class='col-9'>
+      <div class='row'>
+        <h3>Address Book</h3>
+      </div>
+      <div class='row'>
+        <div class='column contacts'>
+          {{#each contacts as |contact|}}
+            <div class='row contact-info'>
+              <div class='col'>
+                <h3>{{contact.firstName}} {{contact.lastName}}</h3>
+              </div>
+              <div class='col'>
+                <button type='button' class='btn btn-primary btn-edit'><a
+                    href='/contacts/{{contact.id}}'
+                  >View Contact</a></button>
+              </div>
+              <div class='col'>
+                <button
+                  type='button'
+                  class='btn btn-primary btn-delete'
+                  data-id='{{contact.id}}'
+                >Delete contact</button>
+              </div>
+            </div>
+          {{/each}}
         </div>
+      </div>
     </div>
-</div>
-<div class="container">
-    <div class="row"> 
-        <div class="col-6"><h2>Person 1</h2></div>
-        <div class=" col-2"><button>View Details</button></div>
-        <div class=" col-2"><button>Edit</button></div>
+    <div class='col-3'>
+      <div>
+        <button type='button' class='btn btn-primary'>Add a new contact</button>
+      </div>
     </div>
-</div>
 
-<script src="/js/logout.js"></script>
+  </div>
+</div>
+{{! <div class='container'>
+  <div class='row title'>
+    <div class='title col-sm-6 col-md-8'>Address Book</div>
+    <div class='add col-6 col-md-4'>
+      <button>+ Add a new contact</button>
+    </div>
+  </div>
+</div>
+<div class='container'>
+  <div class='row'>
+    <div class='col-6'><h2>Person 1</h2></div>
+    <div class='col-2'><button>View Details</button></div>
+    <div class='col-2'><button>Edit</button></div>
+  </div>
+</div> }}
+
+{{! <script src='/js/logout.js'></script> }}
