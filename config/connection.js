@@ -3,7 +3,6 @@ require('dotenv').config();
 
 let sequelize;
 
-//TODO rename db url
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
