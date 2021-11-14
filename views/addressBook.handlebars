@@ -9,29 +9,31 @@
       <div class='row'>
         <h3>Address Book</h3>
       </div>
-      <div class='row'>
-        <div class='column contacts'>
-          {{#each contacts as |contact|}}
-            <div class='row contact-info'>
-              <div class='col'>
-                <h3>{{contact.firstName}} {{contact.lastName}}</h3>
+      {{#if Contacts.length}}
+        <div class='row'>
+          <div class='column contacts'>
+            {{#each Contacts as |contact|}}
+              <div class='row contact-info'>
+                <div class='col'>
+                  <h3>{{contact.firstName}} {{contact.lastName}}</h3>
+                </div>
+                <div class='col'>
+                  <button type='button' class='btn btn-primary btn-edit'><a
+                      href='/contacts/{{contact.id}}'
+                    >View Contact</a></button>
+                </div>
+                <div class='col'>
+                  <button
+                    type='button'
+                    class='btn btn-primary btn-delete'
+                    data-id='{{contact.id}}'
+                  >Delete contact</button>
+                </div>
               </div>
-              <div class='col'>
-                <button type='button' class='btn btn-primary btn-edit'><a
-                    href='/contacts/{{contact.id}}'
-                  >View Contact</a></button>
-              </div>
-              <div class='col'>
-                <button
-                  type='button'
-                  class='btn btn-primary btn-delete'
-                  data-id='{{contact.id}}'
-                >Delete contact</button>
-              </div>
-            </div>
-          {{/each}}
+            {{/each}}
+          </div>
         </div>
-      </div>
+      {{/if}}
     </div>
     <div class='col-3'>
       <div>

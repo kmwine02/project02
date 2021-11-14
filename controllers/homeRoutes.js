@@ -25,12 +25,8 @@ router.get('/', withAuth, async (req, res) => {
 // Show the contacts for a logged in user
 router.get('/addressbook', withAuth, async (req, res) => {
   try {
-    const userContacts = await Contact.findAll({
-      where: {
-        userId: 2,
-      },
-    });
-
+    const userContacts = await Contact.findAll({});
+    console.log(userContacts);
     const contact = userContacts.get({ plain: true });
     console.log(contact);
 
