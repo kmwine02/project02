@@ -43,7 +43,7 @@ Contact.init(
             type: DataTypes.STRING,
             allowNull: true
         },
-        userID: {
+        userId: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
