@@ -2,6 +2,7 @@ html,
 body {
   width: 100vw;
   height: 100vh;
+  background-color: aliceblue;
 }
 
 .container {
@@ -17,10 +18,18 @@ body {
   border: 1px solid red;
 }
 
+.row .contact-info {
+  border: 1px solid red;
+}
+
 .title {
   border: 1px solid red;
 }
 
 .add {
   border: 1px solid red;
+}
+
+a {
+  text-decoration: none;
 }

@@ -6,7 +6,7 @@
 <div class='container container-fluid mt-5'>
   <div class='row align-items-center'>
     <div class='col-9'>
-      <div class='row'>
+      <div class='row text-center'>
         <h3>Address Book</h3>
       </div>
       {{#if Contacts.length}}
@@ -15,10 +15,10 @@
             {{#each Contacts as |contact|}}
               <div class='row contact-info'>
                 <div class='col'>
-                  <h3>{{contact.firstName}} {{contact.lastName}}</h3>
+                  <h4>{{contact.firstName}} {{contact.lastName}}</h4>
                 </div>
                 <div class='col'>
-                  <button type='button' class='btn btn-primary btn-edit'><a
+                  <button type='button' class='btn btn-warning btn-edit'><a
                       href='/contacts/{{contact.id}}'
                     >View Contact</a></button>
                 </div>
