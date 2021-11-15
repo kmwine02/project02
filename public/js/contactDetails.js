@@ -1,6 +1,6 @@
 const saveContactHandler = async (event) => {
-  console.log('save button pressed');
   event.preventDefault();
+  console.log('save button pressed');
 
   const firstName = document.querySelector('#inputFirstName').value.trim();
   const lastName = document.querySelector('#inputLastName').value.trim();
@@ -13,6 +13,7 @@ const saveContactHandler = async (event) => {
 
   if (firstName && lastName) {
     if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
       const response = await fetch(`/api/contacts/:${id}`, {
         method: 'PUT',
         body: JSON.stringify({
@@ -36,7 +37,7 @@ const saveContactHandler = async (event) => {
         alert('Contact updated');
         document.location.replace('/addressbook');
       } else {
-        alert('Failed to create project');
+        alert('Failed to save contact');
       }
     }
   }
