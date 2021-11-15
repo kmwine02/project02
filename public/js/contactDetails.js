@@ -14,7 +14,7 @@ const saveContactHandler = async (event) => {
   if (firstName && lastName) {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
-      const response = await fetch(`/api/contacts/:${id}`, {
+      const response = await fetch(`/api/contacts/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
           firstName,
@@ -31,11 +31,8 @@ const saveContactHandler = async (event) => {
         },
       });
 
-      console.log(response);
-
       if (response.ok) {
         alert('Contact updated');
-        document.location.replace('/addressbook');
       } else {
         alert('Failed to save contact');
       }
@@ -45,4 +42,4 @@ const saveContactHandler = async (event) => {
 
 document
   .querySelector('.submit-button')
-  .addEventListener('click', saveContactHandler());
+  .addEventListener('click', saveContactHandler);
