@@ -26,9 +26,7 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/addressbook', withAuth, async (req, res) => {
   try {
     const userContacts = await Contact.findAll({});
-    console.log(userContacts);
     const contact = userContacts.get({ plain: true });
-    console.log(contact);
 
     res.render('addressbook', {
       ...contact,

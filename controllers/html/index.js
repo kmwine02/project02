@@ -10,10 +10,6 @@ router.get('/signup', (req, res) => {
   res.render('register');
 });
 
-// router.get('/addressbook', (req, res) => {
-//     res.render('addressBook', { title: 'Shem\'s page' });
-// });
-
 // Show the contacts for a logged in user
 router.get('/addressbook', async (req, res) => {
   try {
@@ -23,10 +19,25 @@ router.get('/addressbook', async (req, res) => {
     });
 
     const contact = userContacts.get({ plain: true });
-    console.log(contact);
 
     res.render('addressbook', {
       ...contact,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// show details for an individual contact
+router.get('/contacts/:id', async (req, res) => {
+  try {
+    const contactData = await Contact.findByPk(req.params.id, {});
+
+    const contact = contactData.get({ plain: true });
+
+    res.render('contactDetails', {
+      ...contact,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
