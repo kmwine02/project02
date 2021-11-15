@@ -53,6 +53,7 @@ router.post('/', (req, res) => {
 // Update a contact
 router.put('/:id', (req, res) => {
   //Calls the update method on the Contact model
+  console.log(req);
   Contact.update(
     {
       // All the fields you can update and the data attached to the request body.
@@ -64,7 +65,6 @@ router.put('/:id', (req, res) => {
       addressCity: req.body.addressCity,
       addressState: req.body.addressState,
       addressZip: req.body.addressZip,
-      userId: req.session.userId,
     },
     {
       where: {

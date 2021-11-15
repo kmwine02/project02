@@ -10,6 +10,10 @@ router.get('/register', (req, res) => {
   res.render('register');
 });
 
+router.get('/newContact', (req, res) => {
+  res.render('newContact');
+});
+
 // Show the contacts for a logged in user
 router.get('/addressbook', async (req, res) => {
   try {
