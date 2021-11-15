@@ -31,6 +31,7 @@ router.get('/user/:userId', async (req, res) => {
 
 //Create a contact
 router.post('/', (req, res) => {
+  console.log(req.session);
   Contact.create({
     // All the fields you can update and the data attached to the request body.
     firstName: req.body.firstName,
@@ -41,6 +42,7 @@ router.post('/', (req, res) => {
     addressCity: req.body.addressCity,
     addressState: req.body.addressState,
     addressZip: req.body.addressZip,
+    userId: req.session.user_id,
   })
     .then((newContact) => {
       res.json(newContact);
@@ -53,7 +55,6 @@ router.post('/', (req, res) => {
 // Update a contact
 router.put('/:id', (req, res) => {
   //Calls the update method on the Contact model
-  console.log(req);
   Contact.update(
     {
       // All the fields you can update and the data attached to the request body.
