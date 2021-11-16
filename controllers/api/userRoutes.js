@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 
 // Login
 router.post('/login', async (req, res) => {
+  console.log('trying to log in');
   try {
     const dbUserData = await User.findOne({
       where: {
