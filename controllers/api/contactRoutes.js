@@ -31,7 +31,6 @@ router.get('/user/:userId', async (req, res) => {
 
 //Create a contact
 router.post('/', (req, res) => {
-  console.log(req.session);
   Contact.create({
     // All the fields you can update and the data attached to the request body.
     firstName: req.body.firstName,

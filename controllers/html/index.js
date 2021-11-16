@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const { User, Contact } = require('../../models');
+const formattedDate = require('../../utils/helpers');
 
 router.get('/', (req, res) => {
   res.render('login');
@@ -38,10 +39,12 @@ router.get('/contacts/:id', async (req, res) => {
     const contactData = await Contact.findByPk(req.params.id, {});
 
     const contact = contactData.get({ plain: true });
+    const updateDate = formattedDate(contact.updatedAt);
 
     res.render('contactDetails', {
       ...contact,
       logged_in: req.session.logged_in,
+      update_date: updateDate,
     });
   } catch (err) {
     res.status(500).json(err);

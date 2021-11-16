@@ -5,34 +5,30 @@ body {
   background-color: aliceblue;
 }
 
-.container {
-  border: 1px solid red;
+.header {
+  font-size: 30px;
 }
 
 .title {
-  border: 1px solid red;
   margin-top: 50px;
 }
 
-.row {
-  border: 1px solid red;
-}
-
 .row .contact-info {
-  border: 1px solid red;
+  margin: 5px;
 }
 
-.title {
-  border: 1px solid red;
+.contact-info:hover {
+  background-color: lightgrey;
 }
 
-.add {
-  border: 1px solid red;
+.btn-toolbar {
+  display: inline-block;
+  align-items: flex-end;
 }
 
 a {
   text-decoration: none;
 }
-#logout{
+#logout {
   align-items: flex-end;
 }

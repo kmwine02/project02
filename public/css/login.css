@@ -8,7 +8,7 @@ body {
 .card {
   margin: 0 auto;
   float: none;
-  top: 30vh;
+  top: 20vh;
   font-size: larger;
   background-color: rgb(158, 158, 158);
 }

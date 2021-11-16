@@ -3,30 +3,37 @@
   <link rel='stylesheet' href='/css/address.css' />
 </head>
 
-
-<nav class='navbar navbar-dark navbar-right bg-dark' > 
-  <button class="no-button" id="logout"><a href = '/js/logout.js'></a>Logout</button> </nav>
+<nav class='navbar navbar-light bg-light'>
+  <div class='container-fluid'>
+    <div class='navbar-brand h1 header'>Address Book</div>
+    <form class='d-flex'>
+      <button type='button' class='btn btn-warning me-2'><a
+          href='/newContact'
+        >Add a new contact</a></button>
+      <button
+        class='btn btn-outline-warning'
+        type='submit'
+        id='logout'
+      >Logout</button>
+    </form>
+  </div>
+</nav>
 
 <div class='container container-fluid mt-5'>
-  <div class='row align-items-center'>
-    <div class='col-9'>
-      <div class='row text-center'>
-        <h3>Address Book</h3>
-      </div>
+  <div class='row'>
+    <div class='col'>
       {{#if Contacts.length}}
         <div class='row'>
           <div class='column contacts'>
             {{#each Contacts as |contact|}}
               <div class='row contact-info'>
-                <div class='col'>
+                <div class='col align-text-middle'>
                   <h4>{{contact.firstName}} {{contact.lastName}}</h4>
                 </div>
-                <div class='col'>
-                  <button type='button' class='btn btn-warning btn-edit'><a
+                <div class='col d-flex'>
+                  <button type='button' class='btn btn-warning btn-edit me-2'><a
                       href='/contacts/{{contact.id}}'
                     >View Contact</a></button>
-                </div>
-                <div class='col'>
                   <button
                     type='button'
                     class='btn btn-primary btn-delete'
@@ -38,12 +45,6 @@
           </div>
         </div>
       {{/if}}
-    </div>
-    <div class='col-3'>
-      <div>
-        <button type='button' class='btn btn-warning'><a href='/newContact'>Add
-            a new contact</a></button>
-      </div>
     </div>
 
   </div>
