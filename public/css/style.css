@@ -1,3 +1,11 @@
 #newContactHeader {
   justify-content: space-between;
 }
+
+.navbar {
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+}

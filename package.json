@@ -18,6 +18,8 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
     "express-session": "^1.17.2",
+    "full-icu": "^1.4.0",
+    "luxon": "^2.1.1",
     "mysql2": "^2.3.2",
     "sequelize": "^6.9.0"
   },
