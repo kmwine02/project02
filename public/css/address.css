@@ -29,3 +29,6 @@ body {
 a {
   text-decoration: none;
 }
+#logout{
+  align-items: flex-end;
+}
