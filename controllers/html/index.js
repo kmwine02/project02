@@ -24,7 +24,7 @@ router.get('/addressbook', async (req, res) => {
 
     const contact = userContacts.get({ plain: true });
 
-    res.render('addressbook', {
+    res.render('addressBook', {
       ...contact,
     });
   } catch (err) {
