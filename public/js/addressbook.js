@@ -9,7 +9,7 @@ const deleteButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/addressbook');
+      document.location.replace('/addressBook');
     } else {
       alert('Failed to delete contact');
     }
