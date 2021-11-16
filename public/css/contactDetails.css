@@ -5,3 +5,11 @@ body {
 a {
   text-decoration: none;
 }
+
+.header {
+  font-size: 30px;
+}
+
+.updated-info {
+  text-align: center;
+}

@@ -1,6 +1,5 @@
 const saveContactHandler = async (event) => {
   event.preventDefault();
-  console.log('save button pressed');
 
   const firstName = document.querySelector('#inputFirstName').value.trim();
   const lastName = document.querySelector('#inputLastName').value.trim();

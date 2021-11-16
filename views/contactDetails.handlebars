@@ -1,21 +1,23 @@
 <head>
-  <title>{{title}}</title>
-  <link rel='stylesheet' href='/css/contactDetails.css' />
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/css/contactDetails.css' />
 </head>
+
+<nav class='navbar navbar-light bg-light'>
+    <div class='container-fluid'>
+        <div class='navbar-brand header'>Contact Details</div>
+        <form class='d-flex'>
+            <button class='btn btn-warning me-2'>
+                <a href='/addressBook/'>Return to Contact List</a></button>
+            <button class='btn btn-outline-warning' type='submit' id='logout'>Logout</button>
+        </form>
+    </div>
+</nav>
 
 <div class='container container-fluid mt-5'>
     <div class='row'>
         <div class='col'>
             <div class='row'>
-                <div class='row' id="newContactHeader">
-                    <div>
-                        <h2>Contact Details</h2>
-                    </div>
-                    <div>
-                        <button class='btn btn-warning'>
-                            <a href='/addressBook/'>Return to Contact List</a></button>
-                    </div>
-                </div>
                 <form class='row g-3 new-contact-form'>
                     <div class='col-md-6'>
                         <label for='inputFirstName' class='form-label'>First Name</label>
@@ -62,4 +64,13 @@
     </div>
 </div>
 
+<footer>
+  <div class='container-fluid'>
+    <div class='updated-info mt-5'>
+      Updated on {{update_date}}
+    </div>
+  </div>
+</footer>
+
 <script src='/js/contactDetails.js'></script>
+<script src='/js/logout.js'></script>
